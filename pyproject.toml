@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=72"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "masters-of-literature"
+dynamic = ["version"]
+dependencies = [
+    "pandas>=3.0.3",
+    "numpy>=2.5.0",
+    "matplotlib>=3.11.0"
+]
+authors = [{name = "Jakub Mazur", email = "jm448342@students.mimuw.edu.pl"}]
+
+[project.scripts]
+mypkg = "masters_of_literature:__main__:main"
+
+
