@@ -1,6 +1,6 @@
-To generate the image I used CProfile, which we used during lab about Profiler.
+To generate the profiler data I used CProfile, which we used during lab about Profiler.
 From the image we can see that most of the time is used by most_common_words function from text_analysis module.
 It is not surprising, because this function groups and counts the occurrences of words in letters in huge texts.
-On the second place we have the letter distribution, which is also not surprising, beacuse this is second function,
+On the second place we have the letter distribution, which is also not surprising, because this is second function,
 which moves out the information from data. Rest of the functions are used for analysis or searching in prepared tables,
-so they do no take much time.
+so they do no consume much time.
