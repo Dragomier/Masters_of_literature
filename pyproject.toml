@@ -13,6 +13,6 @@ dependencies = [
 authors = [{name = "Jakub Mazur", email = "jm448342@students.mimuw.edu.pl"}]
 
 [project.scripts]
-mypkg = "masters_of_literature:__main__:main"
+mypkg = "masters_of_literature.__main__:main"
 
 
