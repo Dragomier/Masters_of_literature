@@ -5,14 +5,16 @@ from masters_of_literature.text_analysis import text_stats as stats, text_differ
 def main():
     my_args = args.create_args()
     dictionary_words = read.read_dictionary(my_args.dictionary[0])
+
     if my_args.dictionary_stats:
-        stats.print_stats(dictionary_words)
+        stats.print_stats([dictionary_words])
 
     works = []
-    for i, work in enumerate(my_args.works):
+    for work in my_args.works:
         works.append(read.read_work(work))
-        if my_args.file_stats:
-            stats.print_stats(works[i])
+
+    if my_args.file_stats:
+        stats.print_stats(works)
 
     if my_args.no_words:
         for index in range(len(works)):

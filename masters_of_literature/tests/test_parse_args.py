@@ -12,7 +12,7 @@ def test_no_dictionary_given():
 
 def test_no_work_given():
     with pytest.raises(SystemExit) as ext:
-        parse_args.create_args(["--dictionary", r"C:\Users\kubam\PycharmProjects\Masters_of_literature\dictionaries\pl.txt", "--works"])
+        parse_args.create_args(["--dictionary", r"masters_of_literature\dictionaries\pl.txt", "--works"])
     assert ext.value.code == 2
 
 
