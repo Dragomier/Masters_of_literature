@@ -36,8 +36,14 @@ def create_args(argv = None):
 
     parser.add_argument(
         '--frequencies',
-        help = "For each work, it displays top n most frequently used words, in case there are more words with the same number of occurrences, program will show them,",
+        help = "For each work, it displays top n most frequently used words, in case there are more words with the same number of occurrences, program will show them.",
         nargs = 1,
         type = positive_int.positive_int
+    )
+
+    parser.add_argument(
+        '--prob-function',
+        help="For each pair of works, it displays the probability that they were written by the same author",
+        action = "store_true"
     )
     return parser.parse_args(argv)

@@ -1,6 +1,6 @@
 from masters_of_literature import parse_args as args
 from masters_of_literature.read_input import read_text as read
-from masters_of_literature.text_analysis import text_stats as stats, text_differences as diff
+from masters_of_literature.text_analysis import text_stats as stats, text_differences as diff, text_authorship_prob as prob
 
 def main():
     my_args = args.create_args()
@@ -21,5 +21,11 @@ def main():
     if my_args.frequencies is not None:
         for index in range(len(works)):
             print(stats.most_common_words(works[index], int(my_args.frequencies[0])))
+
+    if my_args.prob_function:
+        how_many = len(works)
+        for i in range(how_many):
+            for j in range(i + 1, how_many):
+                print(f"Probability that the same author wrote texts {i + 1} and {j + 1} is {prob.probability_function(works[i], works[j])}")
 if __name__ == "__main__":
     main()
